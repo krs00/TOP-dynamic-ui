@@ -1,1 +1,61 @@
 @import url("reset.css");
+
+body {
+    font-family: "Helvetica";
+    background: repeating-conic-gradient(#81d891 0% 25%, #68a8d8 0% 50%) 50% /
+      20px 20px;
+    background-size: 50px 50px;
+    background-position: 0 0, 50px 50px;
+    animation: slideAnimation 15s linear infinite;
+    z-index: 1; 
+    height: 100vh;
+    /* overflow: hidden; */
+  }
+  
+  @keyframes slideAnimation {
+    0% {
+      background-position: 0 0, 50px 50px;
+    }
+    100% {
+      background-position: 100px 100px, 150px 150px;
+    }
+  }
+
+
+/* dropdown wrapper */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* drop down button! */
+.dropdown-btn {
+    background-color: #de7e00;
+    color: #000000;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    /* display: none; */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Dropdown content items */
+.dropdown-content li {
+    padding: 10px;
+}
+
+/* Highlight on hover */
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
